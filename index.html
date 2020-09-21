@@ -5,8 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-    <title>Code Quiz</title>
     
 
     <!-- Bootstrap CSS -->
@@ -17,51 +15,54 @@
      <!-- Bootswatch Theme (Materia) -->
      <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
 
+     <title>Code Quiz</title>
+
   </head>
 
   <body>
-
+  <!-- Navbar -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-      <div class="nav navbar-nav navbar-right" id="timer">Time: 0</div>
+      <div class="nav navbar-nav navbar-right" id="timer">Time :<span id="timer">50</span></div>
     </div>
   </nav>
 
+  
   <section class= "d-flex justify-content-center mt-5">
+
     <div class="jumbotron">
       <div class ="row">
-        <div class = "col-md-12">
-        <h1 class="display-4">Coding Quiz Challenge!</h1>
+       <div class = "col-md-12">
+        <h1 class="header, display-4">Coding Quiz Challenge!</h1> 
         <p class="lead">Try to answer the following code-related questions within the time limit.</p>
         <!-- Bootstrap Spacing -->
         <hr class="my-4">
         <p>Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
         <!-- Start the Quiz Button -->
         <div id="buttons">
-          <a class="btn btn-success btn-lg" id="start-button" role="button">Start</a>
-          <a class="btn btn-dark btn-lg" id="highScores-button" href="highscores.html" role="button" aria-pressed="true">High Scores</a>  
+          <a class="btn btn-success btn-lg" id="startButton" role="button">Start</a>
+          <a class="btn btn-dark btn-lg" id="highScoresButton" href="highscores.html" role="button" aria-pressed="true">High Scores</a>  
           </div>
         </div>
         </div>
       </div>
+
+  </section>
+  
+<!-- Coding questions -->
+  <section id="quiz-section" class="hide">
+   <div class="row">
+    <div class="col-md-12 questions">
+       <h3 id="question-title"></h3>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-12" id="choices"></div>
+      <div id="feedback" class="feedback hide"></div>
+    </div>
   </section>
 
-  
-  
-  <div id="timer" class="">
-    <!-- Timer will display here -->
-  </div>      
-
- 
-  <div id="choices" class="btn-group-vertical">
-    <!-- Answer choices will display here -->
-  </div>
-  
-
-  <div class="result-message">
-    <!-- "Correct" or "Incorrect" will display here -->
-  </div>
-
+  <button id="submit" type="button" class="btn btn-success d-none">Submit Score</button>
 
 
   <!-- JavaScript from Bootstrap's template -->
@@ -71,7 +72,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   
 
-    <script src="./quiz.js"></script>
+    <script type="text/javascript" src=".highscores.js"></script>
+    <script type="text/javascript" src=".quiz.js"></script>
     
 </body>
 
