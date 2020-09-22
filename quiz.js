@@ -27,18 +27,32 @@ var questions = [
 ];
 
 // Declared Variables
-var score = 0;
+let questionCounter = 0;
+let score = 0;
+let totalQuestions = [];
 var questionIndex = 0;
 
+var title = document.getElementById("title");
+var description = document.getElementById("descripton");
 var quizTime = document.querySelector("#quizTime");
 var timer = document.querySelector("#start-button");
-var quizQuestions = document.querySelector("#quiz-questions");
+var quizContainer = document.getElementById("quiz-container");
 var startButton = document.getElementById("start-button");
+var highScoreButton = document.getElementById("highScoresButton")
+var timerOn = false;
 
 var secondsLeft = 75;
 var timerInterval = 0;
 var penalty = 10;
 var ulCreate = document.createElement("ul");
+
+startButton.addEventListener("click", function() {
+  startButton.className += " invisible";
+  highScoreButton.className += " invisible";
+  quizContainer.className -= "invisible";
+  timerOn = true;
+  startTimer();
+});
 
 timer.addEventListener("click", function() {
   if (timerInterval === 0) {
@@ -49,66 +63,12 @@ timer.addEventListener("click", function() {
       if (secondsLeft <= 0) {
         clearInterval(timerInterval);
         endQuiz();
-        quizTime.textContent = "Time's up!";
+        quizTime.textContent = "Time is Up!";
       }
     }, 1000);
   }
-  render(questionIndex);
+  render(quizContainer);
 });
 
-function render(questionIndex) {
-  quizQuestions.innerHTML = "";
-  ulCreate.innerHTML = "";
-
-  for (var i = 0; i < questions.length; i++) {
-    var userQuestion = questions[questionsIndex].title;
-    var userChoices = questions[questionIndex].choices;
-    quizQuestions.textContent = userQuestion;
-  }
-
-  userChoices.forEach(function (newItem) {
-    var listItem = document.createElement("li");
-    listItem.textContent = newItem;
-    quizQuestions.appendChild(ulCreate);
-    ulCreate.appendChild(listItem);
-    listItem.addEventListener("click", (check));
-  })
-}
-
-function check(event) {
-  var element = event.target;
-
-  if (element.matches("li")) {
-
-    var createDiv = document.createElement("div");
-
-    if (element.textContent == questions[questionIndex].answer) {
-      score++;
-      createDiv.textContent = "Correct! The answer is " + questions[questionIndex].answer;
-
-    } else {
-      secondsLeft = secondsLeft - penalty;
-      createDiv.textContent = "Wrong! The correct answer is " + questions[questionIndex].answer;
-    }
-  }
-}
-
-questionIndex++;
-
-if (questionIndex >= questions.length) {
-  endQuiz();
-  createDiv.textContent = "You've Completed the Quiz!" + " " + "You got " + score + "/" + questions.length + " Correct!";
-} else {
-  render(questionsIndex);
-}
-quizQuestions.appendChild(createDiv);
-
-}
-
-function endQuiz() {
-  quizQuestions.innerHTML = "";
-  quizTime.innerHTML = "";
 
 
-//Add event listener
-startButton.addEventListener("click", startQuiz);
