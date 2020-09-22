@@ -26,9 +26,30 @@
       </nav>
     </header>
 
+    <aside class="d-flex justify-content-center">
+      <div class="d-none" id="questionPage"> 
+        <div class="jumbotron">
+          <div class="row">
+            <div class ="col-md-12">
+              <h3 id="question">Question</h3><br>
+                <ul class="list-unstyled answerChoices">
+                    <li ><button type="button" class="btn btn-info btn-block choice">choice1</button></li><br>
+                    <li ><button type="button" class="btn btn-info btn-block choice">choice2</button></li><br>
+                    <li ><button type="button" class="btn btn-info btn-block choice">choice3</button></li><br>
+                    <li ><button type="button" class="btn btn-info btn-block choice">choice4</button></li><br>
+                    <li ><button type="button" class="btn btn-info btn-block choice">choice5</button></li>
+                </ul>
+                    <br>
+                    <hr>
+                    <p id="feedback"></p>
+                </div>
+            </div>  
+        </div> 
+      </aside>
+
   <!-- Coding Quiz -->
-  <section class= "d-flex justify-content-center mt-5"> 
-    <div class="jumbotron">
+  <section class="d-flex justify-content-center mt-5"> 
+    <div class="jumbotron" id="startPage">
       <div class="row">
         <div class = "col-md-12">
         <h1 class="text-center" id="title">Coding Quiz Challenege!</h1>
@@ -48,43 +69,24 @@
     </div>
   </section>
 
-  <div id="question-container">
-  <div class= "invisible" id="question-container">
-    <div class="mx-5 jumbotron">
-      <h4 class="questions"></h4>
-      <hr class="my-4">
-      <ul>
-        <li class="my-3">
-          <a class="btn btn-primary btn-lg" id="answerA" href="#" role="button">1.</a>
-        </li>
-        <li class="my-3">
-          <a class="btn btn-primary btn-lg"  id="answerB" href="#" role="button">2.</a>
-        </li>
-        <li class="my-3">
-          <a class="btn btn-primary btn-lg"  id="answerC" href="#" role="button">3.</a>
-        </li>
-        <li class="my-3">
-          <a class="btn btn-primary btn-lg"  id="answerD" href="#" role="button">4.</a>
-        </li>
-      </ul>
+
+ 
+
+
+    <div class="container-fluid d-none" id="finalPage">
+      <div class="row d-flex justify-content-center">    
+          <div class="col-sm-10 col-lg-8 mt-5" id="start-page">
+              <h2>All Done!</h2>
+              <p id="score">Your final score is : </p>
+              <form class="form-group">
+                  <label for="new-score">Enter your name: </label>
+                  <input type="text" id="userName"> 
+                  <button type="button" class="btn btn-info btn-sm " id="submitBtn">Submit</button>
+              </form>
+          </div>
+      </div>
     </div>
-  </div>
 
-
-  
-  <div id="results">
-  <div class="card text-center">
-  <div class="card-header">
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Quiz Results</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="highscores.html" class="btn btn-primary">View High Scores</a>
-  </div>
-  <div class="card-footer text-muted">
-  </div>
-</div>
-</div>
 
   
   
@@ -103,6 +105,7 @@
 
 
     <script type="text/javascript" src="./quiz.js"></script>
+    <script type="text/javascript" src="./questions.js"></script>
    
     
 </body>
