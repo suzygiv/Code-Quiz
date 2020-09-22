@@ -1,9 +1,9 @@
 var highScore = document.querySelector("#highScore");
-var clear = document.querySelector("#clear-button");
-var goBack = document.querySelector("#back-button");
+var clearBtn = document.querySelector("#clear-button");
+var backBtn = document.querySelector("#back-button");
 
 // Event listener to clear scores 
-clear.addEventListener("click", function () {
+clearBtn.addEventListener("click", function(event) {
     localStorage.clear();
     location.reload();
 });

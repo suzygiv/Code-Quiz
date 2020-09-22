@@ -11,58 +11,88 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-     <!-- Bootswatch Theme (Materia) -->
-     <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
 
      <title>Code Quiz</title>
 
   </head>
 
   <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="nav navbar-nav navbar-right" id="timer">Time :<span id="timer">50</span></div>
-    </div>
-  </nav>
 
-  
-  <section class= "d-flex justify-content-center mt-5">
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div id="quizTime">Time Remaining: </div>
+      </nav>
+    </header>
 
+  <!-- Coding Quiz -->
+  <section class= "d-flex justify-content-center mt-5"> 
     <div class="jumbotron">
-      <div class ="row">
-       <div class = "col-md-12">
-        <h1 class="header, display-4">Coding Quiz Challenge!</h1> 
-        <p class="lead">Try to answer the following code-related questions within the time limit.</p>
-        <!-- Bootstrap Spacing -->
-        <hr class="my-4">
-        <p>Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
-        <!-- Start the Quiz Button -->
-        <div id="buttons">
-          <a class="btn btn-success btn-lg" id="startButton" role="button">Start</a>
-          <a class="btn btn-dark btn-lg" id="highScoresButton" href="highscores.html" role="button" aria-pressed="true">High Scores</a>  
-          </div>
+      <div class="row">
+        <div class = "col-md-12">
+        <h1 class="text-center" id="title">Coding Quiz Challenege!</h1>
+        <div class="text-center" id="description">
+          <p>Try to answer the following code-related questions within the time limit.</p>
+          <!-- Bootstrap Spacing -->
+          <hr class="my-4">
+          <p>Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
         </div>
+        <div class="text-center" id="start-button">
+          <button class="btn btn-success btn-lg" id="start-button">
+            Start Quiz
+          </button>
+        </div>
+        <br>
+        <div class="text-center" id="high-scores-button">
+           <a class="btn btn-dark btn-lg" href="highscores.html" role="button">View High Scores</a>
         </div>
       </div>
-
+      </div>
+    </div>
   </section>
   
-<!-- Coding questions -->
-  <section id="quiz-section" class="hide">
-   <div class="row">
-    <div class="col-md-12 questions">
-       <h3 id="question-title"></h3>
+  <!-- Displays Questions -->
+  <div class="container d-none" id="quiz-questions">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center" id="questions"></h1>
+        <div class="row">
+          <div class="col-md-12">
+          <div class="text-center mt-5 d-flex flex-column">
+          <ul id="choices">
+            <div class="text-center" id="question-validity"></div>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="container d-none" id="all-done">
     <div class="row">
-      <div class="col-md-12" id="choices"></div>
-      <div id="feedback" class="feedback hide"></div>
+      <div class="col-md">
+        <h1 class="text-center" id="all-done-text">You've Completed the Quiz!</h1>
+        <h2 class="text-center">
+          Your final score is:
+          <p id="final-score"></p>
+        </h2>
+      </div>
     </div>
-  </section>
+    <div class="row justify-content-center">
+      <div>
+        <p>Enter initials:</p>
+        <input type="text" id="initial-input" />
+        <a href="high-scores.html">
+          <button class="btn btn-danger" id="initials-button">
+            Submit
+          </button></a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+        
 
-  <button id="submit" type="button" class="btn btn-success d-none">Submit Score</button>
+
+        
 
 
   <!-- JavaScript from Bootstrap's template -->
@@ -72,9 +102,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   
 
-    <script type="text/javascript" src=".highscores.js"></script>
-    <script type="text/javascript" src=".quiz.js"></script>
+
+    <script type="text/javascript" src="./quiz.js"></script>
+   
     
 </body>
 
 </html>
+  
+         
