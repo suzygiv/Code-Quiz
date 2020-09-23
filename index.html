@@ -57,10 +57,11 @@
          <div class="card text-center">
          <div class="card-body">
           <div id="choice-buttons" class="btn-group-horizontal btn-grid">
-            <button type="button" class="btn btn-info" id="choice1"></button>
-            <button type="button" class="btn btn-info" id="choice2"></button>
-            <button type="button" class="btn btn-info" id="choice3"></button>
-            <button type="button" class="btn btn-info" id="choice4"></button>
+            <label class="option"><input type="radio" name="option" value="1"><span id="opt1"></span></label>
+            <label class="option"><input type="radio" name="option" value="1"><span id="opt2"></span></label>
+            <label class="option"><input type="radio" name="option" value="1"><span id="opt3"></span></label>
+            <label class="option"><input type="radio" name="option" value="1"><span id="opt4"></span></label>
+            <button id="answerButton" class="answer-button" onclick="submitButton();">Submit Answer</button>
           </div>
           <div id="answer" class="container" style="display:none;"></div>
        </div>

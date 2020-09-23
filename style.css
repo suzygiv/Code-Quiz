@@ -65,7 +65,7 @@ body{
 }
 #question-page {
   padding: 20px;
-  font-size: 22px;
+  font-size: 16px;
   background: white;
   position: center;
   width: 200px;
@@ -83,7 +83,7 @@ body{
   background: #cacaca;
   margin: 10px 0 10px 0;
   color: black;
-  border-radius: 20px;
+  border: 20px;
 }
 
 .option:hover {
@@ -91,22 +91,22 @@ body{
   color: white;
 }
 
-.answer-btn{
+.answer-button{
   border: none;
   outline: none;
   background: teal;
   color: white;
   width: 200px;
   height: 35px;
-  border-radius: 20px;
+  border: 20px;
   cursor: pointer;
-  float: right;
+  align-items: center;
   margin: 10px;
 }
 
-.answer-btn:hover{
+.answer-button:hover{
   background: white;
-  color:teal;
+  color: teal;
 }
 
 .result{
