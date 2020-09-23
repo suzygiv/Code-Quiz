@@ -1,28 +1,10 @@
-/*Index*/
 
-.navbar {
-  font-size: 16px;
-  font-weight: bold;
+body{
+  font-family: 'Questrial', sans-serif;
+  background: #cacaca
 }
 
-.jumbotron {
-    min-width: 585px;
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    margin: 10px 10px 10px 10px;
-    border: 0.08em solid black;
-  }
-  
-  #socDesc {
-    color: black;
-  }
-  
-  body {
-    min-width: 520px;
-  }
-
-  h1 {
+ h1 {
     /* Box-model */
     padding: 9px;
     
@@ -35,37 +17,105 @@
     color: black;
     text-align: center;
     }
+
+.container{
+  height: 330px;
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 8px 3px rgb(41, 41, 41);
+}
+
+.h1 {
+  /* Box-model */
+  padding: 9px;
   
-  .buttons {
-    position: relative;
-    }
+  /* Positioning */
+  margin: 12px;
+  font-size: 40px;
   
-    p {
-      font-family: 'Kumbh Sans', sans-serif;
-      font-size: 16px;
-      text-align: center;
-    }
-    
-    * {
-      box-sizing: border-box;
-    }
-    
-    body {
-      background-color: #f1f1f1;
-      padding: 18px;
-      font-family: Arial;
-    }
-    
-    
-    /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 900px) {
-      .column {
-        width: 50%;
-      }
-    }
-    
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-      }
+  /* Typography */
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-align: center;
+  }
+
+.title{
+ padding-top: 20px;
+ text-align: center;
+ font-size: 36px;
+ text-transform: uppercase;
+ color: black
+}
+
+#question-page{
+  height: 330px;
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 8px 3px rgb(41, 41, 41);
+}
+#question-page {
+  padding: 20px;
+  font-size: 22px;
+  background: white;
+  position: center;
+  width: 200px;
+  height: 200px;
+  border: 20px;
+  margin: 10px 0 10px 0;
+  color: black
+}
+
+.option{
+  width: 470px;
+  display: inline-block;
+  padding: 10px 0 10px 0;
+  vertical-align: middle;
+  background: #cacaca;
+  margin: 10px 0 10px 0;
+  color: black;
+  border-radius: 20px;
+}
+
+.option:hover {
+  background: teal;
+  color: white;
+}
+
+.answer-btn{
+  border: none;
+  outline: none;
+  background: teal;
+  color: white;
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  cursor: pointer;
+  float: right;
+  margin: 10px;
+}
+
+.answer-btn:hover{
+  background: white;
+  color:teal;
+}
+
+.result{
+  height: 100px;
+  text-align: center;
+  font-size: 75px;
+}
+
+.option input:checked .option{
+  background: teal;
+  color: white;
+}

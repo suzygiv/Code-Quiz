@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,64 +23,60 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="mb-3 btn btn-outline-info my-0 mr-md-auto" href="highscores.html" id="highScoreButton" role="button">View High Scores</a>
-        <div id="quizTime">Time: </div>
+        <div id="quizTime">Time Remaining: </div>
       </nav>
     </header>
 
-    <aside class="d-flex justify-content-center">
-      <div class="d-none" id="questionPage"> 
-        <div class="jumbotron">
-          <div class="row">
-            <div class ="col-md-12">
-              <h3 id="question">Question</h3><br>
-                <ul class="list-unstyled answerChoices">
-                    <li ><button type="button" class="btn btn-info btn-block choice">choice1</button></li><br>
-                    <li ><button type="button" class="btn btn-info btn-block choice">choice2</button></li><br>
-                    <li ><button type="button" class="btn btn-info btn-block choice">choice3</button></li><br>
-                    <li ><button type="button" class="btn btn-info btn-block choice">choice4</button></li><br>
-                    <li ><button type="button" class="btn btn-info btn-block choice">choice5</button></li>
-                </ul>
-                    <br>
-                    <hr>
-                    <p id="feedback"></p>
-                </div>
-            </div>  
-        </div> 
-      </aside>
+  <main>
 
-  <!-- Coding Quiz -->
-  <section class="d-flex justify-content-center mt-5"> 
-    <div class="jumbotron" id="startPage">
-      <div class="row">
-        <div class = "col-md-12">
-        <h1 class="text-center" id="title">Coding Quiz Challenege!</h1>
-        <div class="text-center" id="description">
-          <p>Try to answer the following code-related questions within the time limit.</p>
-          <!-- Bootstrap Spacing -->
-          <hr class="my-4">
-          <p>Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
-        </div>
-        <div class="text-center" id="start-button">
-          <button class="btn btn-success btn-lg" id="start-button">
+    <!-- Start Page-->
+    <div class="card-body">
+      <div id="start-page" class="card text-center">
+        <div class="row">
+          <div class="col-md-12">
+        <h1 class="card-title">Coding Quiz Challenge!</h1>
+        <p class="card-text">Try to answer the following code-related questions within the time limit.</p>
+        <p class="card-text">Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
+        <p>You have 1 minute and 15 seconds</p>
+          <div class="text-center" id="start-button">
+          <button class="mb-3 btn btn-outline-info my-0 mr-md-auto">
             Start Quiz
           </button>
+          </div>
+          </div>
         </div>
       </div>
-      </div>
     </div>
-  </section>
+    
 
-
+    <!-- Question Container -->
+    <div id="question-page" class="d-none">
+    <div class ="container">
+      <div class ="row">
+       <div class = "col-md-12">
+         <div class="card text-center">
+         <div class="card-body">
+          <div id="choice-buttons" class="btn-group-horizontal btn-grid">
+            <button type="button" class="btn btn-info" id="choice1"></button>
+            <button type="button" class="btn btn-info" id="choice2"></button>
+            <button type="button" class="btn btn-info" id="choice3"></button>
+            <button type="button" class="btn btn-info" id="choice4"></button>
+          </div>
+          <div id="answer" class="container" style="display:none;"></div>
+       </div>
+       </div>
+     </div>
+    </div>
+   </div>
+  </div>
  
-
-
-    <div class="container-fluid d-none" id="finalPage">
+    <div id="score-page" class="container-fluid d-none">
       <div class="row d-flex justify-content-center">    
-          <div class="col-sm-10 col-lg-8 mt-5" id="start-page">
+          <div class="col-sm-10 col-lg-8 mt-5">
               <h2>All Done!</h2>
               <p id="score">Your final score is : </p>
               <form class="form-group">
-                  <label for="new-score">Enter your name: </label>
+                  <label for="userName">Enter your name: </label>
                   <input type="text" id="userName"> 
                   <button type="button" class="btn btn-info btn-sm " id="submitBtn">Submit</button>
               </form>
@@ -87,7 +84,18 @@
       </div>
     </div>
 
+ 
+    <div id="end-page" class="card">
+      <div class="card-body d-none">
+      <button type="button" id="retake-button" class="btn btn-info">Retake Quiz</button>
+      <button type="button" id="clear-button" class="btn btn-info">Clear Highscores</button>
+      </div> 
+  </div>
 
+
+
+
+  </main>
   
   
 
@@ -103,9 +111,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   
 
-
-    <script type="text/javascript" src="./quiz.js"></script>
-    <script type="text/javascript" src="./questions.js"></script>
+    <script src="./quiz.js"></script>
+    <script src="./questions.js"></script>
    
     
 </body>
