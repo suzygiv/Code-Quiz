@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -56,12 +55,13 @@
        <div class = "col-md-12">
          <div class="card text-center">
          <div class="card-body">
-          <div id="choice-buttons" class="btn-group-horizontal btn-grid">
-            <label class="option"><input type="radio" name="option" value="1"><span id="opt1"></span></label>
-            <label class="option"><input type="radio" name="option" value="1"><span id="opt2"></span></label>
-            <label class="option"><input type="radio" name="option" value="1"><span id="opt3"></span></label>
-            <label class="option"><input type="radio" name="option" value="1"><span id="opt4"></span></label>
-            <button id="answerButton" class="answer-button" onclick="submitButton();">Submit Answer</button>
+           <h4 id="question">Question</h4>
+          <div id="choice-buttons" class="btn-group-vertical btn-grid">
+            <button type="button" class="btn btn-info"id="opt1">1</button>
+            <button type="button" class="btn btn-info"id="opt2">2</button>
+            <button type="button" class="btn btn-info"id="opt3">3</button>
+            <button type="button" class="btn btn-info"id="opt4">4</button> <br>
+            <button id="answerButton" class="mb-3 btn btn-outline-info my-0 mr-md-auto">Submit Answer</button>
           </div>
           <div id="answer" class="container" style="display:none;"></div>
        </div>
@@ -119,4 +119,3 @@
 </body>
 
 </html>
-  
