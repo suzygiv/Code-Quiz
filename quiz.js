@@ -26,13 +26,13 @@ var questions = [{
 }
 ]
 
-//setting the numerical variables for the functions.. scores and timers.. 
+// Variables 
 var score = 0;
 var currentQuestion = -1;
 var timeLeft = 0;
 var timer;
 
-//starts the countdown timer once user clicks the 'start' button
+// Starts the timer
 function start() {
 
 timeLeft = 75;
@@ -41,7 +41,7 @@ document.getElementById("timeLeft").innerHTML = timeLeft;
 timer = setInterval(function() {
   timeLeft--;
   document.getElementById("timeLeft").innerHTML = timeLeft;
-  //proceed to end the game function when timer is below 0 at any time
+ 
   if (timeLeft <= 0) {
       clearInterval(timer);
       endGame(); 
@@ -191,155 +191,3 @@ document.getElementById("quizBody").innerHTML = quizContent;
 
 
 
-
-
-
-// var quizQuestions = 0;
-// var currentQuestion = 0;
-// var score = 0;
-
-// const quizTime = document.getElementById("quizTime");
-// const startButton = document.getElementById("start-button");
-// const highScoreButton = document.getElementById("highScoresButton")
-// const submitButton = document.getElementById('answerButton');
-// const timer = document.querySelector("#start-button");
-
-// var startPageContainer = document.getElementById("start-page");
-// var quizPageContainer = document.getElementById('quiz-page');
-// var questionEl = document.getElementById("question");
-// var nextButton = document.getElementById("nextButton");
-// var resultContainer = document.getElementById("result");
-
-// const opt1 = document.getElementById("opt1");
-// const opt2 = document.getElementById("opt2");
-// const opt3 = document.getElementById("opt3");
-// const opt4 = document.getElementById("opt4");
-
-
-// var timerOn = false;
-// var secondsLeft = 75;
-// var timerInterval = 0;
-// var penalty = 10;
-
-// var myQuestions = [{  
-//   question: "Inside which HTML element do we put the JavaScript?",
-//   option1: "<javascript>",
-//   option2: "<scripting>", 
-//   option3: "<script>",
-//   option4: "<js>",
-//   answer: "3"
-// },
-// {
-//   question: "Where is the correct place to insert a JavaScript?",
-//   option1: "The <head> sections",
-//   option2: "The <body> section",
-//   option3: "Both the <head> section and the <body>",
-//   option4: "The <footer>",
-//   answer: "3"
-// },
-// {
-//   question: "How do you create a function in JavaScript?",
-//   option1: "function myFunction()",
-//   option2: "function:myFunction()" ,
-//   option3: "function:myFunction()",
-//   option4: "myFunction()",
-//   answer: "1"
-// },
-// {
-//   question: "How do you call a function named 'myFunction'?",
-//   option1: "call myFunction()",
-//   option2: "call function myFunction()",
-//   option3: "myFunction()",
-//   option4: "function()",
-//   answer: "3"
-// },
-// {
-//   question: "How does a FOR loop start?",
-//   option1: "for i = 1 to 5", 
-//   option2:"for (i <=5; i++)", 
-//   option3: "for (i = 0; i <= 5; i++)", 
-//   option4: "for (i = 0; i <= 5)",
-//   answer: "3"
-// }]
-
-
-// timer.addEventListener("click", function() {
-//   if (timerInterval === 0) {
-//     timerInterval = setInterval(function() {
-//       secondsLeft--;
-//       quizTime.textContent = "Time Remaining: " + secondsLeft;
-
-//       if (secondsLeft <= 0) {
-//         clearInterval(timerInterval);
-//         endQuiz();
-//         quizTime.textContent = "Time is Up!";
-//       }
-//     }, 1000);
-//   }
-//   startQuiz();
-// });
-
-// function startQuiz() {
-// startPageContainer = document.getElementById("start-page");
-//   if (startPageContainer.style.display === "none") {
-//     startPageContainer.style.display = "block";
-//   } else {
-//     startPageContainer.style.display = "none";
-//   }
-//   quizPageContainer.className -= "invisible";
-  
-//   }
-
-//   const totalQuestions = quizQuestions.length;
-
-//   function loadQuestion (questionIndex) {
-//     var q = questions[questionIndex]; // Give a question from one of the question index
-//     questionEl.textContent = (questionIndex + 1) +'. ' + q.question // Assign question element text content, questionIndex + 1 will give the question number
-//     opt1.textContent = q.option1;
-//     opt2.textContent = q.option2;
-//     opt3.textContent = q.option3;
-//     opt4.textContent = q.option4;
-  
-//     questionPageContainer = document.getElementById("question-page");
-//     if (questionPageContainer.style.display === "none") {
-//       questionPageContainer.style.display = "block";
-//     } else {
-//       questionPageContainer.style.display = "none";
-//     }
-  
-//     function loadNextQuestion() {
-//       var selectedOption = document.querySelector('input[type=radio]:checked');
-//       if (!selectedOption){
-//           alert ('Please select your answer!');
-//           return;
-//       }
-  
-//       var chkAnswerEl = document.getElementById('chkAns')
-//       var answer = selectedOption.value;
-//       if(questions[currentQuestion].answer != answer){
-//           chkAnswerEl.textContent = "Incorrect Answer";
-//           startCount = startCount - 10;
-//       }
-//       if(questions[currentQuestion].answer == answer){
-//           chkAnswerEl.textContent = "That's Correct!";
-//       }
-  
-//       selectedOption.checked = false;
-//       currentQuestion++;
-//       if(currentQuestion == totalQuestions - 1){
-//           answerButton.textContent= "Finish";
-//       }
-  
-//       if((currentQuestion == totalQuestions) || 'quizTimer' === 0){
-//           container.style.display = 'none';
-//           resultContainer.style.display = '';
-//           resultContainer.textContent='Your Score: ' + quizTimer.textContent;
-//           return;
-//       }
-//       loadQuestion(currentQuestion);
-//   }
-//   loadQuestion(currentQuestion);
-    
-    
-
-// };
