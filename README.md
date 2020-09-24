@@ -29,3 +29,4 @@ The Code Quiz is a timed quiz application that tests your basic Javascript knowl
 https://suzygiv.github.io/Code-Quiz/
 
 
+![Main Page](./images/CodeQuiz.PNG)
