@@ -24,4 +24,7 @@ The Code Quiz is a timed quiz application that tests your basic Javascript knowl
 - Local Storage
 - Time intervals
 
+## Link to Code Quiz
+https://suzygiv.github.io/Code-Quiz/
+
 
