@@ -47,3 +47,11 @@ https://suzygiv.github.io/Code-Quiz/
 
 ## Game Over Display
 ![Game Over Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuizGameOver.PNG)
+
+
+
+
+
+
+## Set Score Page
+![Score Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuizSetScore.PNG)
