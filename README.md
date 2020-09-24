@@ -32,3 +32,7 @@ https://suzygiv.github.io/Code-Quiz/
  
  ## Code Quiz Home Page
 ![Main Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuiz.PNG)
+
+
+## Displaying the Starting Timer - Top Right Corner
+![Timer Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuizTimer.PNG)
