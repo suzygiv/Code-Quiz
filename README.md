@@ -28,13 +28,7 @@ The Code Quiz is a timed quiz application that tests your basic Javascript knowl
 ## Link to Code Quiz
 https://suzygiv.github.io/Code-Quiz/
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-![Code Quiz Main Page](file:///C:/Users/givnishs/Code-Quiz/Assets/CodeQuiz.PNG)
-=======
-![GitHub Logo](./images/CodeQuiz.png)
-Format: ![Alt Text](url)
->>>>>>> 12809fbb7fcb7642feb4f0b2dd0dc9829ec03903
-=======
->>>>>>> 64eabc3f8ab7e18362dfdc890f993d3bf5d733ea
+ 
+ 
+ ## Code Quiz Home Page
+![Main Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuiz.PNG)
