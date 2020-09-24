@@ -1,33 +1,32 @@
-
-body{
-  font-family: 'Questrial', sans-serif;
-  background: #cacaca
+/* nav bar */
+.right {
+  float: right;
 }
 
- h1 {
-    /* Box-model */
-    padding: 9px;
-    
-    /* Positioning */
-    margin: 12px;
-    font-size: 40px;
-    
-    /* Typography */
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    text-align: center;
-    }
+.left {
+  float: left;
+}
 
-.container{
-  height: 330px;
-  width: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background: white;
-  padding: 20px;
-  box-shadow: 0 0 8px 3px rgb(41, 41, 41);
+#nav {
+  display: block;
+  background-color: white;
+  display: inline-block;
+  width: 98vw;
+  border: 3px solid lightgrey;
+  border-radius: 5px;
+  margin: 6px;
+}
+
+/* main section */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+}
+
+#quizBody {
+  text-align: center;
+  padding: 12vh;
 }
 
 .h1 {
@@ -44,76 +43,35 @@ body{
   text-align: center;
   }
 
-.title{
- padding-top: 20px;
- text-align: center;
- font-size: 36px;
- text-transform: uppercase;
- color: black
-}
+  .h4 {
+    font-family: sans-serif;
+  }
 
-#question-page{
-  height: 330px;
-  width: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  background: white;
-  padding: 20px;
-  box-shadow: 0 0 8px 3px rgb(41, 41, 41);
-}
-#question-page {
-  padding: 20px;
+.p {
   font-size: 16px;
-  background: white;
-  position: center;
-  width: 200px;
-  height: 200px;
-  border: 20px;
-  margin: 10px 0 10px 0;
-  color: black
 }
 
-.option{
-  width: 470px;
-  display: inline-block;
-  padding: 10px 0 10px 0;
-  vertical-align: middle;
-  background: #cacaca;
-  margin: 10px 0 10px 0;
+a {
+  text-decoration: none;
   color: black;
-  border: 20px;
 }
 
-.option:hover {
-  background: teal;
-  color: white;
-}
-
-.answer-button{
+button {
   border: none;
-  outline: none;
-  width: 200px;
-  height: 35px;
-  border: 20px;
-  cursor: pointer;
-  align-items: center;
-  margin: 10px;
-}
-
-.answer-button:hover{
-  background: white;
-  color: teal;
-}
-
-.result{
-  height: 100px;
-  text-align: center;
-  font-size: 75px;
-}
-
-.option input:checked .option{
-  background: teal;
+  background-color: teal;
   color: white;
+  border-radius: 5px;
+  padding: 10px 16px 10px 16px;
+  font-size: 17px;
+  font-family: 'Roboto Slab', arial;
+  margin: 4px;
+}
+
+button:hover {
+  transition-duration: 0.4s;
+  background-color:;
+}
+
+#quiz {
+  text-align: center;
 }

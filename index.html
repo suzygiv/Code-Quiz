@@ -1,121 +1,49 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+<!DOCTYPE html>
 
-    <!-- Bootstrap CSS -->
+<html>
+	<head>
+		<title>Code Quiz</title>
+    <meta charset="UTF-8">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-     <title>Code Quiz</title>
-
-  </head>
-
-  <body>
+		<link href="style.css" rel="stylesheet" type="text/css">
+  
+	</head>
+	<body>
 
     <!-- Navbar -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="mb-3 btn btn-outline-info my-0 mr-md-auto" href="highscores.html" id="highScoreButton" role="button">View High Scores</a>
-        <div id="quizTime">Time Remaining: </div>
-      </nav>
-    </header>
-
-  <main>
-
-    <!-- Start Page-->
-    <div class="card-body">
-      <div id="start-page" class="card text-center">
-        <div class="row">
-          <div class="col-md-12">
-        <h1 class="card-title">Coding Quiz Challenge!</h1>
-        <p class="card-text">Try to answer the following code-related questions within the time limit.</p>
-        <p class="card-text">Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
-        <p>You have 1 minute and 15 seconds</p>
-          <div class="text-center" id="start-button">
-          <button class="mb-3 btn btn-outline-info my-0 mr-md-auto">
-            Start Quiz
-          </button>
-          </div>
-          </div>
+		<div id="nav">
+			<!-- view scores link on the top left of nav bar-->
+			<div class="left">
+         <a onclick="getScore()"  href="highscores.html"><h4>View Highscore</h4></a>
+      </div>
+      
+			<!-- countdown timer on the top right of nav bar-->
+			<div class="right">
+				<h4>Time: <span id="timeLeft">0</span></h4>
+			</div>
+    </div>
+    
+		<!--Quiz -->
+		<div id="quiz">
+      <div class="card-body">
+        <div id="start-page" class="card text-center">
+          <div class="row">
+            <div class="col-md-12">
+            <div id="quizBody">      
+           <h1 class="card-title">Coding Quiz Challenge!</h1>
+            <p class="card-text">Try to answer the following code-related questions within the time limit.</p>
+            <p class="card-text">Keep in mind that incorrect answers will penalize your score & time by ten seconds!</p>
+            <p>You have 1 minute and 15 seconds</p>
+            <button onclick="start()">Start Quiz</button>
+            </div>
         </div>
       </div>
     </div>
-    
-
-    <!-- Question Container -->
-    <div id="question-page" class="d-none">
-    <div class ="container">
-      <div class ="row">
-       <div class = "col-md-12">
-         <div class="card text-center">
-         <div class="card-body">
-           <h4 id="question">Question</h4>
-          <div id="choice-buttons" class="btn-group-vertical btn-grid">
-            <button type="button" class="btn btn-info"id="opt1">1</button>
-            <button type="button" class="btn btn-info"id="opt2">2</button>
-            <button type="button" class="btn btn-info"id="opt3">3</button>
-            <button type="button" class="btn btn-info"id="opt4">4</button> <br>
-            <button id="answerButton" class="mb-3 btn btn-outline-info my-0 mr-md-auto">Submit Answer</button>
-          </div>
-          <div id="answer" class="container" style="display:none;"></div>
-       </div>
-       </div>
-     </div>
-    </div>
-   </div>
   </div>
- 
-    <div id="score-page" class="container-fluid d-none">
-      <div class="row d-flex justify-content-center">    
-          <div class="col-sm-10 col-lg-8 mt-5">
-              <h2>All Done!</h2>
-              <p id="score">Your final score is : </p>
-              <form class="form-group">
-                  <label for="userName">Enter your name: </label>
-                  <input type="text" id="userName"> 
-                  <button type="button" class="btn btn-info btn-sm " id="submitBtn">Submit</button>
-              </form>
-          </div>
-      </div>
-    </div>
+</div>
 
- 
-    <div id="final-page" class="card">
-      <div class="card-body d-none">
-      <button type="button" id="retake-button" class="btn btn-info">Retake Quiz</button>
-      <button type="button" id="clear-button" class="btn btn-info">Clear Highscores</button>
-      </div> 
-  </div>
-
-
-
-
-  </main>
-  
-  
-
-
-
-        
-
-
-  <!-- JavaScript from Bootstrap's template -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  
-
-    <script src="./quiz.js"></script>
-
-   
-    
-</body>
-
+        <script src="./quiz.js" type="text/javascript"></script>
+	</body>
 </html>
