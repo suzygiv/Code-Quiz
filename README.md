@@ -25,4 +25,9 @@ The Code Quiz is a timed quiz application that tests your basic Javascript knowl
 - Time intervals
 
 
+<<<<<<< HEAD
 ![Code Quiz Main Page](file:///C:/Users/givnishs/Code-Quiz/Assets/CodeQuiz.PNG)
+=======
+![GitHub Logo](./images/CodeQuiz.png)
+Format: ![Alt Text](url)
+>>>>>>> 12809fbb7fcb7642feb4f0b2dd0dc9829ec03903
