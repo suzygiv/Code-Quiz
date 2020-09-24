@@ -34,5 +34,16 @@ https://suzygiv.github.io/Code-Quiz/
 ![Main Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuiz.PNG)
 
 
+
+
+
+
 ## Displaying the Starting Timer - Top Right Corner
 ![Timer Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuizTimer.PNG)
+
+
+
+
+
+## Game Over Display
+![Game Over Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuizGameOver.PNG)
