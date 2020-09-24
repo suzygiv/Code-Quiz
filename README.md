@@ -16,13 +16,14 @@ The Code Quiz is a timed quiz application that tests your basic Javascript knowl
 
 ## Javascript Aspects and Core Functions of the Quiz
 
+- Timer intervals (Main aspect of this quiz)
 - Variables and arrays 
 - Web APIs
 - Access and manipulation to the DOM
 - Functions
 - Events - Onclick 
 - Local Storage
-- Time intervals
+
 
 ## Link to Code Quiz
 https://suzygiv.github.io/Code-Quiz/
