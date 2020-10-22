@@ -55,3 +55,7 @@ https://suzygiv.github.io/Code-Quiz/
 
 ## Set Score Page
 ![Score Page](https://github.com/suzygiv/Code-Quiz/blob/master/Assets/CodeQuizSetScore.PNG)
+
+
+## License
+[MIT License](http://opensource.org/licenses/mit-license.php)
